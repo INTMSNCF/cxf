@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
 <!--
-  Licensed to the Apache Software Foundation (ASF) under one
-  or more contributor license agreements. See the NOTICE file
-  distributed with this work for additional information
-  regarding copyright ownership. The ASF licenses this file
-  to you under the Apache License, Version 2.0 (the
-  "License"); you may not use this file except in compliance
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing,
-  software distributed under the License is distributed on an
-  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-  KIND, either express or implied. See the License for the
-  specific language governing permissions and limitations
-  under the License.
+     Licensed to the Apache Software Foundation (ASF) under one
+     or more contributor license agreements. See the NOTICE file
+     distributed with this work for additional information
+     regarding copyright ownership. The ASF licenses this file
+     to you under the Apache License, Version 2.0 (the
+     "License"); you may not use this file except in compliance
+     
+     http://www.apache.org/licenses/LICENSE-2.0
+     
+     Unless required by applicable law or agreed to in writing,
+     software distributed under the License is distributed on an
+     "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied. See the License for the
+     specific language governing permissions and limitations
+     under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <groupId>org.apache.cxf</groupId>
         <artifactId>cxf</artifactId>
-        <version>3.1.5</version>
+        <version>3.1.5.sncf.t166</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>cxf-parent</artifactId>
@@ -171,7 +171,7 @@
         <cxf.javax.el.version>3.0.0</cxf.javax.el.version>
         <!-- various OSGi related versions -->
         <cxf.aries.version>1.0.0</cxf.aries.version>
-        <cxf.aries.parser.version>1.3.1</cxf.aries.parser.version> 
+        <cxf.aries.parser.version>1.3.1</cxf.aries.parser.version>
         <cxf.aries.version.range>[1.0,2)</cxf.aries.version.range>
         <cxf.osgi.version>4.2.0</cxf.osgi.version>
         <cxf.karaf.version>3.0.2</cxf.karaf.version>
@@ -718,7 +718,7 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-
+            
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
@@ -1347,31 +1347,31 @@
                 <version>${cxf.spring.osgi.version}</version>
             </dependency>
             <dependency>
-                 <groupId>org.springframework.osgi</groupId>
-                 <artifactId>spring-osgi-core</artifactId>
-                 <version>${cxf.spring.osgi.version}</version>
-                 <exclusions>
-                     <exclusion>
-                         <groupId>org.springframework</groupId>
-                         <artifactId>org.springframework.aop</artifactId>
-                     </exclusion>
-                     <exclusion>
-                         <groupId>org.springframework</groupId>
-                         <artifactId>com.springsource.org.aopalliance</artifactId>
-                     </exclusion>
-                     <exclusion>
-                         <groupId>org.springframework</groupId>
-                         <artifactId>org.springframework.core</artifactId>
-                     </exclusion>
-                     <exclusion>
-                         <groupId>org.springframework</groupId>
-                         <artifactId>org.springframework.context</artifactId>
-                     </exclusion>
-                     <exclusion>
-                         <groupId>org.springframework</groupId>
-                         <artifactId>org.springframework.beans</artifactId>
-                     </exclusion>
-                 </exclusions>
+                <groupId>org.springframework.osgi</groupId>
+                <artifactId>spring-osgi-core</artifactId>
+                <version>${cxf.spring.osgi.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>org.springframework.aop</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>com.springsource.org.aopalliance</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>org.springframework.core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>org.springframework.context</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>org.springframework.beans</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>commons-codec</groupId>
@@ -2079,7 +2079,7 @@
         </profile>
         <profile>
             <!-- Profile to clean even if you do not have the cxf plugins in
-             your local mavven repo -->
+                 your local mavven repo -->
             <id>clean</id>
             <pluginRepositories>
                 <pluginRepository>
@@ -2091,7 +2091,7 @@
                 <defaultGoal>clean</defaultGoal>
             </build>
         </profile>
-
+        
         <!-- experimental profile to activate ekstazi http://www.ekstazi.org -->
         <profile>
             <id>ekstazi</id>
@@ -2100,7 +2100,7 @@
                     <name>ekstazi</name>
                 </property>
             </activation>
-          
+            
             <build>
                 <plugins>
                     <plugin>
@@ -2121,7 +2121,7 @@
                             </execution>
                         </executions>
                     </plugin>
-              
+                    
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>

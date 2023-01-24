@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
 <!--
-  Licensed to the Apache Software Foundation (ASF) under one
-  or more contributor license agreements. See the NOTICE file
-  distributed with this work for additional information
-  regarding copyright ownership. The ASF licenses this file
-  to you under the Apache License, Version 2.0 (the
-  "License"); you may not use this file except in compliance
-  with the License. You may obtain a copy of the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing,
-  software distributed under the License is distributed on an
-  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-  KIND, either express or implied. See the License for the
-  specific language governing permissions and limitations
-  under the License.
+     Licensed to the Apache Software Foundation (ASF) under one
+     or more contributor license agreements. See the NOTICE file
+     distributed with this work for additional information
+     regarding copyright ownership. The ASF licenses this file
+     to you under the Apache License, Version 2.0 (the
+     "License"); you may not use this file except in compliance
+     with the License. You may obtain a copy of the License at
+     
+     http://www.apache.org/licenses/LICENSE-2.0
+     
+     Unless required by applicable law or agreed to in writing,
+     software distributed under the License is distributed on an
+     "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied. See the License for the
+     specific language governing permissions and limitations
+     under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <artifactId>cxf-parent</artifactId>
         <groupId>org.apache.cxf</groupId>
-        <version>3.1.5</version>
+        <version>3.1.5.sncf.t166</version>
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -35,7 +35,7 @@
         <cxf.glassfish.el.version>3.0-b01</cxf.glassfish.el.version>
         <cxf.surefire.fork.vmargs>-XX:MaxPermSize=192m</cxf.surefire.fork.vmargs>
         <cxf.server.launcher.vmargs>-XX:MaxPermSize=192m</cxf.server.launcher.vmargs>
-
+        
     </properties>
     <dependencies>
         <!-- for swagger 1.2 tests -->
@@ -44,8 +44,8 @@
             <artifactId>swagger-jaxrs_2.10</artifactId>
             <exclusions>
                 <exclusion>
-                     <groupId>javax.ws.rs</groupId>
-                     <artifactId>jsr311-api</artifactId>
+                    <groupId>javax.ws.rs</groupId>
+                    <artifactId>jsr311-api</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -55,8 +55,8 @@
             <artifactId>swagger-jaxrs</artifactId>
             <exclusions>
                 <exclusion>
-                     <groupId>javax.ws.rs</groupId>
-                     <artifactId>jsr311-api</artifactId>
+                    <groupId>javax.ws.rs</groupId>
+                    <artifactId>jsr311-api</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -64,7 +64,7 @@
             <groupId>javassist</groupId>
             <artifactId>javassist</artifactId>
             <version>3.12.1.GA</version>
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
@@ -83,11 +83,11 @@
             <artifactId>javax.json</artifactId>
         </dependency>
         <!--
-          <dependency>
-            <groupId>org.apache.bval</groupId>
-            <artifactId>bval-jsr</artifactId>
-            <version>1.1.0-alpha-SNAPSHOT</version>
-          </dependency>
+             <dependency>
+             <groupId>org.apache.bval</groupId>
+             <artifactId>bval-jsr</artifactId>
+             <version>1.1.0-alpha-SNAPSHOT</version>
+             </dependency>
         -->
         <dependency>
             <groupId>javax.el</groupId>
@@ -172,18 +172,18 @@
             <artifactId>apache-jsp</artifactId>
             <version>${cxf.jetty.version}</version>
             <exclusions>
-              <exclusion>
-                <groupId>org.glassfish</groupId>
-                <artifactId>javax.el</artifactId>
-              </exclusion> 
-            </exclusions> 
+                <exclusion>
+                    <groupId>org.glassfish</groupId>
+                    <artifactId>javax.el</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-util</artifactId>
             <version>${cxf.jetty.version}</version>
         </dependency>
-
+        
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-core</artifactId>
@@ -485,13 +485,13 @@
             <version>${cxf.netty3.version}</version>
             <scope>test</scope>
         </dependency>
-         <dependency>
+        <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-core</artifactId>
             <version>${cxf.lucene.version}</version>
             <scope>test</scope>
         </dependency>
-         <dependency>
+        <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-analyzers-common</artifactId>
             <version>${cxf.lucene.version}</version>
@@ -515,10 +515,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-           <groupId>org.yaml</groupId>
-           <artifactId>snakeyaml</artifactId>
-           <version>1.15</version>
-           <scope>test</scope>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.15</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <!-- activate atmosphere. Its use can be disabled by setting
@@ -587,18 +587,18 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <dependencies>
-              <dependency>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-plus</artifactId>
-                <version>${cxf.jetty8.version}</version>
-                <scope>test</scope>
-              </dependency>
-              <dependency>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-websocket</artifactId>
-                <version>${cxf.jetty8.version}</version>
-                <scope>test</scope>
-              </dependency>
+                <dependency>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-plus</artifactId>
+                    <version>${cxf.jetty8.version}</version>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-websocket</artifactId>
+                    <version>${cxf.jetty8.version}</version>
+                    <scope>test</scope>
+                </dependency>
             </dependencies>
         </profile>
         <profile>
