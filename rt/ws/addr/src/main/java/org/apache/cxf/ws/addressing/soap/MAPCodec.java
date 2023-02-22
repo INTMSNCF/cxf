@@ -832,7 +832,7 @@ public class MAPCodec extends AbstractSoapInterceptor {
             && !Names.WSA_UNSPECIFIED_RELATIONSHIP.equals(maps.getRelatesTo().getValue())
             && isRelationshipReply(maps.getRelatesTo())) {
             Exchange correlatedExchange = uncorrelatedExchanges.remove(maps.getRelatesTo().getValue());
-            removeAllExchangesInOrder(maps.getMessageID().getValue());
+            removeAllExchangesInOrder(maps.getRelatesTo().getValue());
             if (correlatedExchange != null) {
                 synchronized (correlatedExchange) {
                     message.setExchange(correlatedExchange);
