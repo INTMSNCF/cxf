@@ -3,22 +3,22 @@
     <parent>
         <groupId>org.apache.cxf</groupId>
         <artifactId>cxf-parent</artifactId>
-        <version>3.1.5</version>
+        <version>3.1.5.sncf.t166</version>
         <relativePath>../../../parent/pom.xml</relativePath>
     </parent>
     <artifactId>cxf-rt-features-throttling</artifactId>
     <packaging>bundle</packaging>
     <name>Apache CXF Throttling Feature</name>
     <description>Apache CXF Throttling Feature</description>
-
+    
     <dependencies>
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-core</artifactId>
             <version>${project.version}</version>
         </dependency>
-
-
+        
+        
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
